@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for (( i=1 ; i<=7 ; i++ ))
+do
+opencv_createsamples -img Positive_Images/pia$i.png -num 15 -bg Negative_Images/negatives.dat -vec samples$i.vec -maxxangle 0.6 -maxyangle 0 -maxzangle 0.3 -maxidev 100 -bgcolor 0 -bgthresh 0 -w 80 -h 10
+
+done
+
+
