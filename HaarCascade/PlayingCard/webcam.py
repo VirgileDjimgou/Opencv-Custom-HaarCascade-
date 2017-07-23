@@ -30,7 +30,7 @@ class Webcam(object):
             cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
   
         # save image to disk
-        #self._save_image('WebCam/Detection/', img)
+        self._save_image('WebCam/Detection/', img)
   
         # show image in window
         cv2.imshow(self.WINDOW_NAME, img)
