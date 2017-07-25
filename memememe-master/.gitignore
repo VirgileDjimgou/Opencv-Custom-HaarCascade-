@@ -1,0 +1,13 @@
+.DS*
+Android/**/bin
+Android/**/gen
+Android/**/proguard.cfg
+Android/**/obj
+*.pyc
+Processing/**/*cropped
+Processing/**/positive01*
+Python/**/*.vec
+Python/**/data/*.txt
+Python/**/data/*samples
+Python/**/data/**/neg*jpg
+Python/**/data/**/stage*xml

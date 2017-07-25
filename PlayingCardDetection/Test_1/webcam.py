@@ -34,7 +34,7 @@ class Webcam(object):
   
         # show image in window
         cv2.imshow(self.WINDOW_NAME, img)
-        cv2.waitKey(2000)
+        cv2.waitKey(1000)
         cv2.destroyAllWindows()
           
         # indicate whether cards detected
