@@ -118,5 +118,5 @@ def create_pos_n_neg():
                     f.write(line) 
 
 #store_raw_images()
-create_pos_n_neg()
 #ThreadSetup()
+create_pos_n_neg()
