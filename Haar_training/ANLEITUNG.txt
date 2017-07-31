@@ -1,0 +1,19 @@
+Anleitung  sous Ubuntu
+
+1 Etape : Creation Liste de Positif dans un fichiers ...on le realise avec les commandes 
+find ./neg -name '*.jpg' >negatives.txt   .... pour les negatif 
+find ./pos -name '*.png' >positives.txt    ... pour les positif
+
+2- Etape :
+opencv_createsamples -img ./pos/pos.png -bg negatives.txt -info info/info.lst -pngoutput info -maxxangle 1.1 -maxyangle 1.1 -maxzangle 0.5 -num 250
+
+3- Etape :
+opencv_createsamples -info info/info.lst -num 250 -w 50 -h 75 -vec positives.vec
+
+4- Etape : 
+ opencv_traincascade -data data -vec positives.vec -bg negatives.txt -numPos 200 -numNeg 100 -numStages 15 -w 33 -h 46 &
+
+
+Optional 
+opencv_haartraining -data haarcascade -vec samples.vec -bg negatives.dat -nstages 20 -nsplits 2 -minhitrate 0.999 -maxfalsealarm 0.5 -npos 250 -nneg 99 -w 160 -h 20 -nonsym -mem 2048 -mode ALL
+
