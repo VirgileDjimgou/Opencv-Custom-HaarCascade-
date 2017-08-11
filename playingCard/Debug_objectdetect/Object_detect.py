@@ -47,8 +47,8 @@ if __name__ == '__main__':
     video_src = 0 
     print(str(video_src))
     args = dict(args)
-    cascade_fn = args.get('--cascade', "haarcascade_Qhearts.xml")
-    nested_fn  = args.get('--cascade', "myhaar.xml")
+    cascade_fn = args.get('--cascade', "cascade.xml")
+    nested_fn  = args.get('--cascade', "cascade.xml")
 
     cascade = cv2.CascadeClassifier(cascade_fn)
     nested = cv2.CascadeClassifier(nested_fn)
